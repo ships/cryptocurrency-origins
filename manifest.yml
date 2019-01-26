@@ -1,0 +1,11 @@
+applications:
+- name: cryptocurrency-origins-slides
+  memory: 16M
+  instances: 1
+
+  buildpacks:
+  - staticfile_buildpack
+
+  routes:
+  - route: slides.cfapps.io/origins/
+

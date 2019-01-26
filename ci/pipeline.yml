@@ -1,0 +1,37 @@
+---
+resource_types:
+- name: cf
+  type: docker-image
+  source:
+    repository: concourse/cf-resource
+
+resources:
+- name: hk-development
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: ((pws_bot.username))
+    password: ((pws_bot.password))
+    organization: haut-kultur-org
+    space: development
+
+- name: this
+  type: git
+  source:
+    uri: https://github.com/ships/cryptocurrency-origins
+    branch: master
+
+jobs:
+- name: update-development
+  plan:
+  - get: this
+    trigger: true
+  - task: build
+    file: this/ci/build/task.yml
+    input_mapping: {subject: this}
+  - put: hk-development
+    params:
+      path: dirty
+      manifest: this/manifest.yml
+
+
