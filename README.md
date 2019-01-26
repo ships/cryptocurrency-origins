@@ -1,38 +1,9 @@
+Lecture slides describing the conditions that drive out current cryptocurrency research, as a primer.
 
-# mdx-deck basic template
+This talk is in the anthropological track, and discusses things from a human-centric and systems-centric viewpoint.
 
-This was generated with [mdx-deck][]'s `npm init deck` command.
-
-## Development
-
-To run the presentation deck in development mode:
-
-```sh
-npm start
-```
-
-Edit the [`deck.mdx`](deck.mdx) file to get started.
-
-## Exporting
-
-To build the presentation deck as static HTML:
-
-```sh
-npm run build
-```
-
-To export a PDF:
-
-```sh
-npm run pdf
-```
-
-To export an image of the title slide:
-
-```sh
-npm run image
-```
-
-For more documentation see the [mdx-deck][] repo.
+created with [mdx-deck][].
 
 [mdx-deck]: https://github.com/jxnblk/mdx-deck
+
+all material in this deck is copyright 2019 github.com/ships
