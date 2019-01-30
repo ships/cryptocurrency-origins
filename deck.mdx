@@ -1,7 +1,7 @@
 import { Appear, Head } from 'mdx-deck'
 import { Split } from 'mdx-deck/layouts'
 
-import { QRLink } from './src'
+import { QRLink , QRLinkSized } from './src'
 
 export { default as theme } from './theme'
 
@@ -72,7 +72,7 @@ We also considered whether international and domestic remittances could work tog
 
 M-PESA agent in Kibera, Nairobi, Kenya
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/worldremit/33322696760" title="M-PESA agent in Kibera, Nairobi, Kenya"><img src="https://farm4.staticflickr.com/3843/33322696760_d3e1b34350_k.jpg" width="2048" height="1365" alt="M-PESA agent in Kibera, Nairobi, Kenya"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/worldremit/33322696760" title="M-PESA agent in Kibera, Nairobi, Kenya"><img src="https://farm4.staticflickr.com/3843/33322696760_d3e1b34350_k.jpg" width="2048" height="1365" alt="M-PESA agent in Kibera, Nairobi, Kenya"/></a><script async src="//embedr.flickr.com/assets/client-code.js"></script>
 
 ---
 
@@ -107,6 +107,7 @@ if you are a cryptocurrency enthusiast, you are probably already seeing a proble
 
 ```notes
 for example: control of fees, depends onthem to keep running
+1.1B adults with no government ID
 ```
 
 ---
@@ -114,10 +115,23 @@ export default Split
 
 # 3.
 
-<img inline src="https://upload.wikimedia.org/wikipedia/en/3/3b/Vodafone_716.jpg" width="100%"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Vodafone_716.jpg" width="80%"/>
 
 ```notes
 as of 2017, huawei operates mpesa infra on behalf of vodafone
+did you read the news this week?
+```
+
+---
+
+<a title="Marmelad [CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Quarter_rest.svg"><img width="100px" alt="Quarter rest" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Quarter_rest.svg/100px-Quarter_rest.svg.png"/></a>
+
+```notes
+brief rest:
+- We've seen emergent mobile micropayments
+- also, businesses trying to meet the need
+- m-pesa seems outmoded, but is still popular
+- what happened to bitcoin in all this?
 ```
 
 ---
@@ -130,20 +144,34 @@ this remark indicates that these developing markets primarily need small-quantit
 
 ---
 
-28 Ksh (roughly 0.28 USD) / Tx
+M-Pesa: 28 Ksh / Tx
+
+### (≅ 0.28 USD)
+
+```notes
+Finaccess: assessed typical transactions under 2500 Ksh;
+```
+
+---
+
+BTC: 433 kWh / Tx
+
+### (≅ $50.00 USD)
 
 ```notes
 bitcoin Tx are equally expensive regardless of size
+...and it gets worse...
 ```
 
 ---
 
 "Bitcoin’s biggest problem is not even its massive energy consumption, but that the network is mostly fueled by coal-fired power plants in China. Coal-based electricity is available at very low rates in this country. Even with a conservative emission factor, this results in an extreme carbon footprint for each unique Bitcoin transaction.
 
-Additional research published in Nature Climate Change (October 2018) even suggested that Bitcoin mining alone could push global warning “above 2 °C within less than three decades“."
+Additional research published in Nature Climate Change (October 2018) even suggested that Bitcoin mining alone could push global warming “above 2 °C within less than three decades“."
 
 ```notes
 in case y'all were wondering why i had to leave and start this firm in the first place ...
+so you can imagine some of my feels
 ```
 
 ---
@@ -159,6 +187,22 @@ Key takeaways:
 1. Developing markets are primarily concerned with financial access
 2. High likelihood of phone owners compared to computer owners
 3. Dangers of centrally administered economy increases abroad
+4. Decentralized operating costs must compete with provider fees
+
+```notes
+now, you were promised a tech talk
+everything you've heard is to contextualize costs
+```
+
+---
+
+Today's lemma:
+
+## In a cryptocurrency protocol, block agreement is the current leading energy cost.
+
+```notes
+in other words, the efficiency of a blockchain technology depends on its ability to accomplish global consensus.
+```
 
 ---
 
