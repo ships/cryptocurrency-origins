@@ -15,5 +15,10 @@
   "devDependencies": {
     "mdx-deck": "^1.6.7"
   },
-  "name": "cryptocurrency-origins"
+  "name": "cryptocurrency-origins",
+  "dependencies": {
+    "qrcode.react": "^0.9.2",
+    "react": "^16.7.0",
+    "react-mathjax": "^1.0.1"
+  }
 }
