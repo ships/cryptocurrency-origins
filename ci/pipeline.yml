@@ -15,17 +15,51 @@ resources:
     organization: haut-kultur-org
     space: development
 
+- name: concourse-generics
+  type: git
+  source:
+    uri: https://github.com/ships/concourse-generics
+    branch: master
+
 - name: this
   type: git
   source:
-    uri: https://github.com/ships/cryptocurrency-origins
+    uri: git@github.com:ships/algorand-primer
     branch: master
+    private_key: ((github_ssh_ships.private_key))
 
 jobs:
+- name: audit
+  plan:
+  - aggregate:
+    - get: this
+      trigger: true
+    - get: concourse-generics
+  - task: audit
+    file: concourse-generics/audit/linux/node.yml
+    input_mapping: {subject: this}
+    on_failure:
+      do:
+      - task: fix
+        file: this/ci/audit/fix.yml
+        input_mapping: {subject: this}
+      - task: commit
+        file: concourse-generics/git/linux/make-commit.yml
+        input_mapping: {src: dirty}
+        output_mapping: {out: bumped-this}
+        params:
+          SUBJECT: security audit patch dependencies
+          COMMITTER_NAME: early evening
+          COMMITTER_EMAIL: eve@eatbigger.fish
+      - put: this
+        params:
+          repository: bumped-this
+
 - name: update-development
   plan:
   - get: this
     trigger: true
+    passed: [audit]
   - task: build
     file: this/ci/build/task.yml
     input_mapping: {subject: this}
