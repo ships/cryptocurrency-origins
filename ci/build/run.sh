@@ -7,7 +7,7 @@ mkdir -p "$out_dir"
 pushd subject
 
   npm install
-  npm run build
+  npm run -ddd build
 
   cp dist/* "$out_dir"
 
