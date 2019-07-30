@@ -24,7 +24,7 @@ resources:
 - name: this
   type: git
   source:
-    uri: git@github.com:ships/algorand-primer
+    uri: git@github.com:ships/cryptocurrency-origins
     branch: master
     private_key: ((github_ssh_ships.private_key))
 
