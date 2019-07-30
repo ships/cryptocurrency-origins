@@ -31,7 +31,7 @@ resources:
 jobs:
 - name: audit
   plan:
-  - aggregate:
+  - in_parallel:
     - get: this
       trigger: true
     - get: concourse-generics
