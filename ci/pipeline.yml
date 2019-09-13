@@ -51,6 +51,9 @@ jobs:
           SUBJECT: security audit patch dependencies
           COMMITTER_NAME: early evening
           COMMITTER_EMAIL: eve@eatbigger.fish
+      - task: audit-again
+        file: concourse-ci/audit/linux/node.yml
+        input_mapping: {subject: bumped-this}
       - put: this
         params:
           repository: bumped-this
