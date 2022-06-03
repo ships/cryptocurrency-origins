@@ -21,7 +21,7 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "@mdx-js/react": "^1.0.0",
-    "gatsby-plugin-mdx": "^1.0.41",
+    "gatsby-plugin-mdx": "^2.14.1",
     "npm": "^6.10.2",
     "qrcode.react": "^0.9.3",
     "react": "^16.8.6",
